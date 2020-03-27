@@ -1,18 +1,2 @@
 server:
   port: 8090
-spring:
-  security:
-    user:
-      name: username
-      password: password  
-      roles: ADMIN,USER
-security:
-  oauth2:
-    client:
-      client-id: web  
-      client-secret: pass
-      access-token-validity-seconds: 3600
-      authorized-grant-types: refresh_token,password
-      scope: READ,WRITE
-    authorization:
-      check-token-access: permitAll
