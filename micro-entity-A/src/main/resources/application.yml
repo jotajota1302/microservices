@@ -1,0 +1,28 @@
+spring: 
+  datasource:
+    url: jdbc:mysql://localhost:3306/entities?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect 
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+server:
+  port: 8081
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:8761}/eureka/
+  instance:
+    hostname: micro-entityA
+    prefer-ip-address: true
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: basic
