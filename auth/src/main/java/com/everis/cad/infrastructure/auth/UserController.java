@@ -1,4 +1,4 @@
-package com.everis.cad;
+package com.everis.cad.infrastructure.auth;
 
 import java.security.Principal;
 

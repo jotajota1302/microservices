@@ -1,4 +1,4 @@
-package com.everis.cad;
+package com.everis.cad.infrastructure.auth;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;

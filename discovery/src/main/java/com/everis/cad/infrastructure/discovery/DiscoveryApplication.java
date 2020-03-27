@@ -1,4 +1,4 @@
-package everis.cad.discovery;
+package com.everis.cad.infrastructure.discovery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
