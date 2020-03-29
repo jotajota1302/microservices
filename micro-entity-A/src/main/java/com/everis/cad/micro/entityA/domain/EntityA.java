@@ -26,8 +26,11 @@ public class EntityA {
 	@Column(name = "ID", unique = true)
 	private int id;
 
-	@Column(name = "STRING_FIELD")
-	private String stringAttribute;
+	@Column()
+	private String attribute1;
+	
+	@Column()
+	private String attribute2;
 	 
     @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate
