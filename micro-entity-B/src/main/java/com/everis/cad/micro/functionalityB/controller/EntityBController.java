@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityB.controller;
+package com.everis.cad.micro.functionalityB.controller;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.everis.cad.micro.entityB.domain.EntityB;
-import com.everis.cad.micro.entityB.dto.EntityADto;
-import com.everis.cad.micro.entityB.dto.EntityBDto;
-import com.everis.cad.micro.entityB.service.EntityBService;
+import com.everis.cad.micro.functionalityB.domain.EntityB;
+import com.everis.cad.micro.functionalityB.dto.EntityADto;
+import com.everis.cad.micro.functionalityB.dto.EntityBDto;
+import com.everis.cad.micro.functionalityB.service.EntityBService;
 
 @RestController
 @RequestMapping ( value = "/entityB" )

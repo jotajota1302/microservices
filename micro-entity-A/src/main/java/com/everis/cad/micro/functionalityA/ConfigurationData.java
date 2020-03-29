@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityA;
+package com.everis.cad.micro.functionalityA;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

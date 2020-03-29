@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityA.controller;
+package com.everis.cad.micro.functionalityA.controller;
 
 import java.util.List;
 
@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.everis.cad.micro.entityA.ConfigurationData;
-import com.everis.cad.micro.entityA.domain.EntityA;
-import com.everis.cad.micro.entityA.dto.EntityADto;
-import com.everis.cad.micro.entityA.repository.EntityARepository;
-import com.everis.cad.micro.entityA.service.EntityAService;
+import com.everis.cad.micro.functionalityA.ConfigurationData;
+import com.everis.cad.micro.functionalityA.domain.EntityA;
+import com.everis.cad.micro.functionalityA.dto.EntityADto;
+import com.everis.cad.micro.functionalityA.repository.EntityARepository;
+import com.everis.cad.micro.functionalityA.service.EntityAService;
 import com.querydsl.core.types.Predicate;
 
 @RestController

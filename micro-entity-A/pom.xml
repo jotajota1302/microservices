@@ -10,7 +10,7 @@
 		<relativePath />
 	</parent>
 	<groupId>com.everis.cad</groupId>
-	<artifactId>micro-entity-A</artifactId>
+	<artifactId>micro-functionality-A</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>entity-A</name>
 	<description> micro project</description>

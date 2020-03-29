@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityB.dto;
+package com.everis.cad.micro.functionalityB.dto;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityA.repository;
+package com.everis.cad.micro.functionalityA.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.querydsl.QuerydslPredicateExecutor;
@@ -8,8 +8,8 @@ import org.springframework.data.querydsl.binding.SingleValueBinding;
 import org.springframework.data.repository.query.QueryByExampleExecutor;
 import org.springframework.stereotype.Repository;
 
-import com.everis.cad.micro.entityA.domain.EntityA;
 import com.everis.cad.micro.entityA.domain.QEntityA;
+import com.everis.cad.micro.functionalityA.domain.EntityA;
 import com.querydsl.core.types.dsl.StringExpression;
 import com.querydsl.core.types.dsl.StringPath;
 

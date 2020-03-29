@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityA;
+package com.everis.cad.micro.functionalityA;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

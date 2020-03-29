@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityB.domain;
+package com.everis.cad.micro.functionalityA.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,14 +20,17 @@ import lombok.Setter;
 @Entity
 @Table(name = "ENTITY_A_TABLENAME")
 @EntityListeners(AuditingEntityListener.class)
-public class EntityB {
+public class EntityA {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID", unique = true)
 	private int id;
 
-	@Column(name = "STRING_FIELD")
-	private String stringAttribute;
+	@Column()
+	private String attribute1;
+	
+	@Column()
+	private String attribute2;
 	 
     @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate

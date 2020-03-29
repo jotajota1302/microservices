@@ -1,12 +1,12 @@
-package com.everis.cad.micro.entityB.service;
+package com.everis.cad.micro.functionalityB.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.everis.cad.micro.entityB.domain.EntityB;
-import com.everis.cad.micro.entityB.repository.EntityBRepository;
+import com.everis.cad.micro.functionalityB.domain.EntityB;
+import com.everis.cad.micro.functionalityB.repository.EntityBRepository;
 
 @Service
 public class EntityBService {

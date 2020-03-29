@@ -1,12 +1,12 @@
-package com.everis.cad.micro.entityA.service;
+package com.everis.cad.micro.functionalityA.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.everis.cad.micro.entityA.domain.EntityA;
-import com.everis.cad.micro.entityA.repository.EntityARepository;
+import com.everis.cad.micro.functionalityA.domain.EntityA;
+import com.everis.cad.micro.functionalityA.repository.EntityARepository;
 import com.querydsl.core.types.Predicate;
 
 @Service

@@ -1,4 +1,4 @@
-package com.everis.cad.micro.entityA.dto;
+package com.everis.cad.micro.functionalityA.dto;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
