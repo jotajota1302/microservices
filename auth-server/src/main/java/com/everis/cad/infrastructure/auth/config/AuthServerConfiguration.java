@@ -31,12 +31,6 @@ public class AuthServerConfiguration
 	PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder ( );
 
 	@Override
-	protected void configure ( HttpSecurity http ) throws Exception
-	{
-	
-	}
-
-	@Override
 	public void configure ( AuthorizationServerSecurityConfigurer security ) throws Exception
 	{
 		security.checkTokenAccess ( "permitAll" );
