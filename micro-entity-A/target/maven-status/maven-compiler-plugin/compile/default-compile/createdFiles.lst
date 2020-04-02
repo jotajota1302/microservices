@@ -1,0 +1,9 @@
+com\everis\cad\micro\functionalityA\controller\EntityAController.class
+com\everis\cad\micro\functionalityA\SwaggerConfig.class
+com\everis\cad\micro\functionalityA\domain\EntityA.class
+com\everis\cad\micro\functionalityA\dto\EntityADto.class
+com\everis\cad\micro\functionalityA\ConfigurationData.class
+META-INF\spring-configuration-metadata.json
+com\everis\cad\micro\functionalityA\App.class
+com\everis\cad\micro\functionalityA\repository\EntityARepository.class
+com\everis\cad\micro\functionalityA\service\EntityAService.class

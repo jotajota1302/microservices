@@ -1,26 +1,22 @@
-spring:
+spring: 
   application:
     name: micro-entity-b
-  h2:
-    console:
-      enabled: true
-      path: /console
   datasource:
-    url: jdbc:h2:file:~/entityB
-    username: sa
-    password: sa
-    driverClassName: org.h2.Driver
+    url: jdbc:mysql://localhost:3306/entities?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    username: root
+    password: root
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect 
+    database-platform: org.hibernate.dialect.MySQL5Dialect 
     generate-ddl: true
     hibernate:
-      ddl-auto: create
-  security:
+      ddl-auto: update
+security:
     oauth2:
-      resource:        token-info-uri: http://localhost:8090/oauth/check_token
+      resource:
+        tokenInfoUri: http://localhost:8090/oauth/check_token
       client:
         client-id: web
-        client-secret: pass 
+        client-secret: pass
 server:
   port: ${SERVER_PORT:8082}
 eureka:

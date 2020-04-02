@@ -1,0 +1,11 @@
+{
+  "groups": [
+    {
+      "name": "source",
+      "type": "com.everis.cad.micro.functionalityA.ConfigurationData",
+      "sourceType": "com.everis.cad.micro.functionalityA.ConfigurationData"
+    }
+  ],
+  "properties": [],
+  "hints": []
+}
