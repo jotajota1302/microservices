@@ -14,39 +14,36 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 
 @Configuration
 public class AuthServerConfiguration
-		extends WebSecurityConfigurerAdapter
-		implements AuthorizationServerConfigurer
-{
+        extends WebSecurityConfigurerAdapter
+        implements AuthorizationServerConfigurer {
 
-	@Bean
-	public AuthenticationManager authenticationManagerBean ( ) throws Exception
-	{
-		return super.authenticationManager ( );
-	}
+    @Bean
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManager();
+    }
 
-	@Autowired
-	AuthenticationManager authenticationManager;
+    @Autowired
+    AuthenticationManager authenticationManager;
 
-	PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder ( );
+    PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
 
-	@Override
-	public void configure ( AuthorizationServerSecurityConfigurer security ) throws Exception
-	{
-		security.checkTokenAccess ( "permitAll" );
+    @Override
+    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+        security
+                .tokenKeyAccess("permitAll()")
+                .checkTokenAccess("isAuthenticated()");
 
-	}
+    }
 
-	@Override
-	public void configure ( ClientDetailsServiceConfigurer clients ) throws Exception
-	{
-		clients.inMemory ( ).withClient ( "web" ).secret ( passwordEncoder.encode ( "pass" ) ).scopes ( "READ","WRITE" )
-				.authorizedGrantTypes ( "refresh_token", "password","check_token");
-	}
+    @Override
+    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        clients.inMemory().withClient("web").secret(passwordEncoder.encode("pass")).scopes("READ", "WRITE")
+                .authorizedGrantTypes("refresh_token", "password", "check_token");
+    }
 
-	@Override
-	public void configure ( AuthorizationServerEndpointsConfigurer endpoints ) throws Exception
-	{
-		endpoints.authenticationManager ( authenticationManager );
-	}
+    @Override
+    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        endpoints.authenticationManager(authenticationManager);
+    }
 
 }
