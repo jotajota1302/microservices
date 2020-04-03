@@ -9,7 +9,7 @@ spring:
 eureka:
   client:
     registryFetchIntervalSeconds: 5
-    registerWithEureka: false
+    registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${DISCOVERY_HOST:localhost}:${DISCOVERY_PORT:8761}/eureka/
