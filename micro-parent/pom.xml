@@ -37,7 +37,7 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
-		
+
 			<dependency>
 				<groupId>org.mapstruct</groupId>
 				<artifactId>mapstruct</artifactId>
@@ -99,18 +99,9 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<!--
-	<distributionManagement>
-	
-		<snapshotRepository>
-			<id>cts-snapshots</id>
-			<url>https://steps.everis.com/nexus/repository/CTS.Snapshot/</url>
-		</snapshotRepository>
-		<repository>
-			<id>cts-release</id>
-			<url>https://steps.everis.com/nexus/repository/CTS.Release/</url>
-		</repository>
-	</distributionManagement>
-	-->
-	
+	<!-- <distributionManagement> <snapshotRepository> <id>cts-snapshots</id> 
+		<url>https://steps.everis.com/nexus/repository/CTS.Snapshot/</url> </snapshotRepository> 
+		<repository> <id>cts-release</id> <url>https://steps.everis.com/nexus/repository/CTS.Release/</url> 
+		</repository> </distributionManagement> -->
+
 </project>

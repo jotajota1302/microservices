@@ -6,7 +6,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EntityBRepository extends JpaRepository<EntityB, Integer> {
-
-    Integer countByStringAttribute(String att);
-
 }
