@@ -13,7 +13,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableJpaAuditing
 @EnableDiscoveryClient
 @EnableResourceServer
-@EntityScan( basePackages = {"com.everis.cad"} )
 @EntityScan(basePackages = {"com.everis.cad"})
 public class App {
 
