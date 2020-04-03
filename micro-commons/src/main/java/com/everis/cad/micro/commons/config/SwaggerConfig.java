@@ -1,4 +1,4 @@
-package com.everis.cad.micro.config;
+package com.everis.cad.micro.commons.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
