@@ -7,7 +7,7 @@ spring:
   boot:
     admin:
       discovery:
-        ignored-services: gateway-service
+        ignored-services: gateway
 
 eureka:
   client:
