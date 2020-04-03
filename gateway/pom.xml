@@ -6,56 +6,36 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.6.RELEASE</version>
+		<version>2.0.2.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>everis.cad</groupId>
-	<artifactId>auth-server</artifactId>
+	<artifactId>gateway</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>auth-server</name>
-	<description>Auth service</description>
+	<name>gateway</name>
+	<description>Gateway service</description>
 
 	<properties>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Hoxton.SR3</spring-cloud.version>
+		<spring-cloud.version>Finchley.SR2</spring-cloud.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-config</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security.oauth.boot</groupId>
-			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-security</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
+		</dependency>		
+		
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>        
+		
 	</dependencies>
 
 	<dependencyManagement>

@@ -1,4 +1,4 @@
-package everis.cad;
+package com.everis.cad.infrastructure.admin;
 
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

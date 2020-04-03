@@ -6,11 +6,14 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 @SpringBootApplication
 @EnableJpaRepositories
 @EnableJpaAuditing
 @EnableDiscoveryClient
+@EnableResourceServer
+@EntityScan( basePackages = {"com.everis.cad"} )
 @EntityScan(basePackages = {"com.everis.cad"})
 public class App {
 
