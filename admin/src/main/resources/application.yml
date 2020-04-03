@@ -5,6 +5,7 @@ spring:
     admin:
       discovery:
         ignored-services: gateway
+      context-path: /admin
 eureka:
   client:
     registryFetchIntervalSeconds: 5
