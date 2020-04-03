@@ -13,40 +13,47 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
-
 @Configuration
 public class AuthServerConfiguration
-        extends WebSecurityConfigurerAdapter
-        implements AuthorizationServerConfigurer {
+		extends WebSecurityConfigurerAdapter
+		implements AuthorizationServerConfigurer
+{
 
+	@Override
+	protected void configure ( HttpSecurity http ) throws Exception
+	{
+		http.authorizeRequests ( ).antMatchers ( "/actuator/**" ).permitAll ( );
+	}
 
 	@Bean
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManager();
-    }
-   
-    @Autowired
-    AuthenticationManager authenticationManager;
+	public AuthenticationManager authenticationManagerBean ( ) throws Exception
+	{
+		return super.authenticationManager ( );
+	}
 
-    PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder();
+	@Autowired
+	AuthenticationManager authenticationManager;
 
-    @Override
-    public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security
-                .tokenKeyAccess("permitAll()")
-                .checkTokenAccess("isAuthenticated()");
+	PasswordEncoder passwordEncoder = PasswordEncoderFactories.createDelegatingPasswordEncoder ( );
 
-    }
+	@Override
+	public void configure ( AuthorizationServerSecurityConfigurer security ) throws Exception
+	{
+		security.tokenKeyAccess ( "permitAll()" ).checkTokenAccess ( "isAuthenticated()" );
 
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        clients.inMemory().withClient("web").secret(passwordEncoder.encode("pass")).scopes("READ", "WRITE")
-                .authorizedGrantTypes("refresh_token", "password", "check_token");
-    }
+	}
 
-    @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.authenticationManager(authenticationManager);
-    }
+	@Override
+	public void configure ( ClientDetailsServiceConfigurer clients ) throws Exception
+	{
+		clients.inMemory ( ).withClient ( "web" ).secret ( passwordEncoder.encode ( "pass" ) )
+				.scopes ( "READ", "WRITE" ).authorizedGrantTypes ( "refresh_token", "password", "check_token" );
+	}
+
+	@Override
+	public void configure ( AuthorizationServerEndpointsConfigurer endpoints ) throws Exception
+	{
+		endpoints.authenticationManager ( authenticationManager );
+	}
 
 }
