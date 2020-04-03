@@ -2,6 +2,7 @@ package com.everis.cad.micro.functionalityB;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
@@ -10,8 +11,9 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableJpaAuditing
 @EnableDiscoveryClient
-@EnableFeignClients
 @EnableResourceServer
+@EnableFeignClients(basePackages = {"com.everis.cad.micro"})
+@EntityScan(basePackages = {"com.everis.cad"})
 public class App {
 
     public static void main(String[] args) {

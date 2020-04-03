@@ -10,7 +10,7 @@
 		<relativePath />
 	</parent>
 
-	<artifactId>micro-functionality-A</artifactId>
+	<artifactId>micro-entity-A</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

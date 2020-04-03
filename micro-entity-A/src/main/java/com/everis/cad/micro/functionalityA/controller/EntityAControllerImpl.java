@@ -1,5 +1,6 @@
 package com.everis.cad.micro.functionalityA.controller;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.everis.cad.micro.commons.AbstractMicroserviceController;
@@ -10,6 +11,7 @@ import com.everis.cad.micro.functionalityA.service.EntityAService;
 import lombok.RequiredArgsConstructor;
 
 @RestController
+@RequestMapping(value = "/entityA")
 @RequiredArgsConstructor
 public class EntityAControllerImpl extends AbstractMicroserviceController<EntityADto, Integer> implements EntityAController {
 
