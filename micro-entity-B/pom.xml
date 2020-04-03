@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.everis.cad</groupId>
-        <artifactId>micro-commons</artifactId>
+        <artifactId>micro-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/>
     </parent>
+    
     <artifactId>micro-entity-B</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>entity-B</name>
     <description>micro project</description>
 
