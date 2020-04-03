@@ -47,7 +47,7 @@ public class AuthServerConfiguration
 	public void configure ( ClientDetailsServiceConfigurer clients ) throws Exception
 	{
 		clients.inMemory ( ).withClient ( "web" ).secret ( passwordEncoder.encode ( "pass" ) )
-				.scopes ( "READ", "WRITE" ).authorizedGrantTypes ( "refresh_token", "password", "check_token" );
+				.scopes ( "READ", "WRITE" ).authorizedGrantTypes ( "refresh_token", "password", "check_token","client_credentials");
 	}
 
 	@Override

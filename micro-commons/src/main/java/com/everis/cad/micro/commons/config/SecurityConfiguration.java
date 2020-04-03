@@ -11,24 +11,27 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.R
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
 
+	private static final String[] AUTH_WHITELIST = {
+        
+            "/v2/api-docs",
+            "/swagger-resources",
+            "/swagger-resources/**",
+            "/configuration/ui",
+            "/configuration/security",
+            "/swagger-ui.html",
+            "/webjars/**",         
+            "/console/**",
+            "/actuator/**"
+    };
+	
+	
     @Override
     public void configure(HttpSecurity http) throws Exception {
 
-        http.csrf().disable()
-        .httpBasic().disable()
-        .authorizeRequests()
-        .antMatchers("/**/**").permitAll()
-        .antMatchers("/**/public/**").permitAll()
-        .antMatchers("/**/*swagger-*/**").permitAll()
-        .antMatchers("/**/v2/api-docs/**").permitAll()
-        .antMatchers("/**/cockpit/**").permitAll()
-        .antMatchers("/lib/**").permitAll()
-        .antMatchers("/api/**").permitAll()
-        .antMatchers("/app/admin/**").permitAll()
-        .antMatchers("/stomp/**").permitAll()
-        .antMatchers("/actuator/**").permitAll()
-        .antMatchers("/console/**").permitAll()
-        .anyRequest().authenticated();
+    	http.       
+        authorizeRequests().
+        antMatchers(AUTH_WHITELIST).permitAll().  
+        antMatchers("/**").authenticated();  // require authentication for any endpoint that's not whitelisted
 
     }
 
