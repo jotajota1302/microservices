@@ -40,5 +40,4 @@ public class EntityA {
     @LastModifiedDate
     private long modifiedDate;     
 
-	
 }

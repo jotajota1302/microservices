@@ -1,0 +1,12 @@
+.DS_Store
+.classpath
+.project
+.settings/
+mvnw.cmd
+mvnw
+/bin/
+/.apt_generated/
+/.apt_generated_tests/
+/target
+*.iml
+*.log
