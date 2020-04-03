@@ -9,8 +9,10 @@ import org.springframework.context.annotation.Import;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-import com.everis.cad.micro.functionalityA.config.SecurityConfiguration;
-import com.everis.cad.micro.functionalityA.config.SwaggerConfig;
+import com.everis.cad.micro.commons.config.SecurityConfiguration;
+import com.everis.cad.micro.commons.config.SwaggerConfig;
+
+
 
 @SpringBootApplication
 @EnableJpaRepositories

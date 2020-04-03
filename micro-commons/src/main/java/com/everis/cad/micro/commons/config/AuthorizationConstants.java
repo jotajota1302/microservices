@@ -1,4 +1,4 @@
-package com.everis.cad.micro.functionalityA.config;
+package com.everis.cad.micro.commons.config;
 
 public class AuthorizationConstants
 {

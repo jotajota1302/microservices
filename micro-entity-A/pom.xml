@@ -109,7 +109,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>${maven.compiler.plugin}</version>
+				<version>${maven.compiler.plugin}</version><!--$NO-MVN-MAN-VER$-->
 
 				<configuration>
 					<annotationProcessorPaths>

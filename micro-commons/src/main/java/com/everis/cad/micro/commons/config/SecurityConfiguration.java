@@ -1,4 +1,4 @@
-package com.everis.cad.micro.functionalityA.config;
+package com.everis.cad.micro.commons.config;
 
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
