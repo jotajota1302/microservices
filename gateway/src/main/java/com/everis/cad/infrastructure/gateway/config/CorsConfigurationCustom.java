@@ -1,4 +1,4 @@
-package everis.cad.config;
+package com.everis.cad.infrastructure.gateway.config;
 
 
 

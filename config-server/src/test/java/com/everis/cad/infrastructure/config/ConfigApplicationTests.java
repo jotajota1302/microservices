@@ -1,4 +1,4 @@
-package everis.cad;
+package com.everis.cad.infrastructure.config;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
