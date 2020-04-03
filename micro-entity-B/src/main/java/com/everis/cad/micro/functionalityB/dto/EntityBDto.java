@@ -6,10 +6,9 @@ import lombok.Setter;
 @Getter
 @Setter
 public class EntityBDto {
-	
-	private int id;
 
-	private String stringAttribute;
+    private int id;
 
-	
+    private String stringAttribute;
+
 }

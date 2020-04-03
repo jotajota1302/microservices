@@ -1,39 +1,30 @@
 package com.everis.cad.micro.functionalityB.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.everis.cad.micro.commons.AbstractJpaRepositoryManagerImpl;
+import com.everis.cad.micro.commons.EntityMapper;
+import com.everis.cad.micro.commons.Manager;
+import com.everis.cad.micro.functionalityB.domain.EntityB;
+import com.everis.cad.micro.functionalityB.dto.EntityBDto;
+import com.everis.cad.micro.functionalityB.mapper.EntityBMapper;
+import com.everis.cad.micro.functionalityB.repository.EntityBRepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import com.everis.cad.micro.functionalityB.domain.EntityB;
-import com.everis.cad.micro.functionalityB.repository.EntityBRepository;
-
 @Service
-public class EntityBService {
+@RequiredArgsConstructor
+public class EntityBService extends AbstractJpaRepositoryManagerImpl<EntityB, EntityBDto, Integer> implements Manager<EntityBDto, Integer> {
 
-	@Autowired
-	EntityBRepository repository;
+	private final EntityBRepository repository;
+	private final EntityBMapper mapper;
 
-	public void create(EntityB entity) {
-		repository.save(entity);
+	@Override
+	protected JpaRepository<EntityB, Integer> getRepository() {
+		return repository;
 	}
 
-	public EntityB read(int id) {
-		return repository.findById(id).get();
+	@Override
+	protected EntityMapper<EntityB, EntityBDto> getMapper() {
+		return mapper;
 	}
-
-	public List<EntityB> readAll() {
-		return repository.findAll();
-	}
-
-	public void update(EntityB entity) {
-		repository.save(entity);
-	}
-
-	public void delete(int id) {
-		repository.deleteById(id);
-	}
-	
-	
-
 }

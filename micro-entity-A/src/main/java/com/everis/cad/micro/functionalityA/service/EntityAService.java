@@ -1,49 +1,31 @@
 package com.everis.cad.micro.functionalityA.service;
 
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import com.everis.cad.micro.functionalityA.mapper.EntityAMapper;
+import com.everis.cad.micro.commons.AbstractJpaRepositoryManagerImpl;
+import com.everis.cad.micro.commons.EntityMapper;
+import com.everis.cad.micro.commons.Manager;
+import com.everis.cad.micro.functionalityA.domain.EntityA;
+import com.everis.cad.micro.functionalityA.dto.EntityADto;
+import com.everis.cad.micro.functionalityA.repository.EntityARepository;
+import lombok.RequiredArgsConstructor;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import com.everis.cad.micro.functionalityA.domain.EntityA;
-import com.everis.cad.micro.functionalityA.repository.EntityARepository;
-import com.querydsl.core.types.Predicate;
-
 @Service
-public class EntityAService
-{
+@RequiredArgsConstructor
+public class EntityAService extends AbstractJpaRepositoryManagerImpl<EntityA, EntityADto, Integer> implements Manager<EntityADto, Integer> {
 
-	@Autowired
-	EntityARepository repository;
+	private final EntityARepository repository;
+	private final EntityAMapper mapper;
 
-	public void create ( EntityA entity )
-	{
-		repository.save ( entity );
+	@Override
+	protected JpaRepository<EntityA, Integer> getRepository() {
+		return this.repository;
 	}
 
-	public EntityA read ( int id )
-	{
-		return repository.findById ( id ).get ( );
-	}
-
-	public List<EntityA> readAll ( )
-	{
-		return repository.findAll ( );
-	}
-
-	public void update ( EntityA entity )
-	{
-		repository.save ( entity );
-	}
-
-	public void delete ( int id )
-	{
-		repository.deleteById ( id );
-	}
-
-	public List<EntityA> findByPredicate ( Predicate predicate )
-	{		
-		return ( List<EntityA> ) repository.findAll ( predicate );
+	@Override
+	protected EntityMapper<EntityA, EntityADto> getMapper() {
+		return this.mapper;
 	}
 
 }
