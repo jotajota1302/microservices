@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "MICRO_TABLENAME")
 @EntityListeners(AuditingEntityListener.class)
-public class MicroEntity {
+public class Micro1Entity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID", unique = true)

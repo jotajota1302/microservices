@@ -8,7 +8,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @JsonAutoDetect
-public class MicroDto {
+public class Micro1Dto {
 	
 	private Integer id;
 	

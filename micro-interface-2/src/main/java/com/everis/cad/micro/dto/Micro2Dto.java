@@ -8,13 +8,11 @@ import lombok.Setter;
 @Getter
 @Setter
 @JsonAutoDetect
-public class MicroDto {
+public class Micro2Dto {
 	
 	private Integer id;
 	
 	private String attribute1;
-	
-	private String attribute2;	 
  
     private long createdDate;
  

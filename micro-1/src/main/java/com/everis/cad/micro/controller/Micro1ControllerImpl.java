@@ -5,20 +5,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.everis.cad.micro.commons.AbstractMicroserviceController;
 import com.everis.cad.micro.commons.Manager;
-import com.everis.cad.micro.dto.MicroDto;
-import com.everis.cad.micro.service.MicroService;
+import com.everis.cad.micro.dto.Micro1Dto;
+import com.everis.cad.micro.service.Micro1Service;
 
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping(value = "/entity")
 @RequiredArgsConstructor
-public class MicroControllerImpl extends AbstractMicroserviceController<MicroDto, Integer> implements MicroController {
+public class Micro1ControllerImpl extends AbstractMicroserviceController<Micro1Dto, Integer> implements Micro1Controller {
 
-    private final MicroService microService;
+    private final Micro1Service microService;
 
 	@Override
-	protected Manager<MicroDto, Integer> getManager() {
+	protected Manager<Micro1Dto, Integer> getManager() {
 		return this.microService;
 	}
 

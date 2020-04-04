@@ -20,7 +20,7 @@ import lombok.Setter;
 @Entity
 @Table(name = "MICRO_TABLENAME")
 @EntityListeners(AuditingEntityListener.class)
-public class MicroEntity {
+public class Micro2Entity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID", unique = true)
@@ -28,9 +28,6 @@ public class MicroEntity {
 
 	@Column()
 	private String attribute1;
-	
-	@Column()
-	private String attribute2;
 	 
     @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate

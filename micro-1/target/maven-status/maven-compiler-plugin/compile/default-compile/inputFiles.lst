@@ -1,6 +1,6 @@
-C:\git_local\microservices\micro-entity-A\src\main\java\com\everis\cad\micro\domain\MicroEntity.java
-C:\git_local\microservices\micro-entity-A\src\main\java\com\everis\cad\micro\repository\MicroRepository.java
-C:\git_local\microservices\micro-entity-A\src\main\java\com\everis\cad\micro\service\MicroService.java
-C:\git_local\microservices\micro-entity-A\src\main\java\com\everis\cad\micro\App.java
-C:\git_local\microservices\micro-entity-A\src\main\java\com\everis\cad\micro\controller\MicroControllerImpl.java
-C:\git_local\microservices\micro-entity-A\src\main\java\com\everis\cad\micro\mapper\MicroMapper.java
+C:\git_local\microservices\micro-1\src\main\java\com\everis\cad\micro\repository\Micro1Repository.java
+C:\git_local\microservices\micro-1\src\main\java\com\everis\cad\micro\service\Micro1Service.java
+C:\git_local\microservices\micro-1\src\main\java\com\everis\cad\micro\mapper\Micro1Mapper.java
+C:\git_local\microservices\micro-1\src\main\java\com\everis\cad\micro\App.java
+C:\git_local\microservices\micro-1\src\main\java\com\everis\cad\micro\domain\Micro1Entity.java
+C:\git_local\microservices\micro-1\src\main\java\com\everis\cad\micro\controller\Micro1ControllerImpl.java

@@ -8,19 +8,3 @@ eureka:
   instance:
     hostname: gateway
     prefer-ip-address: truemanagement:  endpoints:    web:      exposure:        include: info,metrics,health
-zuul:
-  ignored-services: discovery, config, gateway, auth
-  sensitiveHeaders:
-  host:
-    connect-timeout-millis: 20000
-    socket-timeout-millis: 20000    
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 80000
-ribbon:
-  ReadTimeout: 20000
-  ConnectTimeout: 20000  ActiveConnectionsLimit: 20
