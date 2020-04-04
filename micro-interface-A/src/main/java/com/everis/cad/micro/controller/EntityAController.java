@@ -1,9 +1,10 @@
-package com.everis.cad.micro.functionalityA.controller;
+package com.everis.cad.micro.controller;
 
-import com.everis.cad.micro.functionalityA.dto.EntityADto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.everis.cad.micro.dto.EntityADto;
 
 import java.util.List;
 
