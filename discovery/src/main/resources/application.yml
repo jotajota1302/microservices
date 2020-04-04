@@ -14,4 +14,7 @@ eureka:
   instance:
     hostname: admin
     prefer-ip-address: true  
-
+ribbon:
+  http:
+    client:
+      enabled: true
