@@ -30,12 +30,13 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
 
     	http.       
         authorizeRequests().
+        antMatchers("/**/**").permitAll().
         antMatchers(AUTH_WHITELIST).permitAll().  
         antMatchers("/**").authenticated();  // require authentication for any endpoint that's not whitelisted
 
-    }
-    
-    
-    
+    	//only for dev purposes
+    	http.csrf().disable();
+    	http.headers().frameOptions().disable();
+    }          
  
 }
