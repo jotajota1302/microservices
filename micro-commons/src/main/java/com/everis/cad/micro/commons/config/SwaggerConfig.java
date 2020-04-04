@@ -5,11 +5,9 @@ import java.util.List;
 
 import org.springframework.context.annotation.Bean;
 
-import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 
-import springfox.documentation.RequestHandler;
-import springfox.documentation.builders.ApiInfoBuilder;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiKey;
 import springfox.documentation.service.AuthorizationScope;
@@ -25,21 +23,18 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerConfig {
 
     @Bean
-    public Docket swaggerSpringMvcPlugin() {
-        return new Docket(DocumentationType.SWAGGER_2).apiInfo(new ApiInfoBuilder().build())
-                .securityContexts(configureSecurityContext()).securitySchemes(configureSecurityScheme()).select().apis(apis())
-                .build();
+    public Docket api() {
+    	
+    	 return new Docket(DocumentationType.SWAGGER_2)  
+    		  .securityContexts(configureSecurityContext())
+              .securitySchemes(configureSecurityScheme())
+   	          .select()                                  
+   	          .apis(RequestHandlerSelectors.basePackage("com.everis.cad"))              
+   	          .paths(PathSelectors.any())
+   	          .build();         	 
     }
-
-    /**
-     * Apis.
-     *
-     * @return the predicate
-     */
-    private Predicate<RequestHandler> apis() {
-        return Predicates.not(RequestHandlerSelectors.basePackage("org.springframework"));
-    }
-
+    
+	
     /**
      * Configures the security context.
      *

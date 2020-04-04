@@ -23,7 +23,7 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
             "/console/**",
             "/actuator/**"
     };
-	
+
 	
     @Override
     public void configure(HttpSecurity http) throws Exception {
@@ -34,8 +34,8 @@ public class SecurityConfiguration extends ResourceServerConfigurerAdapter {
         antMatchers("/**").authenticated();  // require authentication for any endpoint that's not whitelisted
 
     }
-
-
+    
+    
     
  
 }
