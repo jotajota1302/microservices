@@ -10,9 +10,9 @@ import lombok.Setter;
 @JsonAutoDetect
 public class EntityBDto {
 	
-	private String attribute1;
+	private String id;
 	
-	private String attribute2;	 
+	private String attribute1;
  
     private long createdDate;
  

@@ -10,6 +10,8 @@ import lombok.Setter;
 @JsonAutoDetect
 public class EntityADto {
 	
+	private Integer id;
+	
 	private String attribute1;
 	
 	private String attribute2;	 

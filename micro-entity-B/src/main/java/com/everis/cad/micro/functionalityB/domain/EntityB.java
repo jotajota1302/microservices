@@ -14,21 +14,22 @@ import javax.persistence.*;
 @Table(name = "ENTITY_B_TABLENAME")
 @EntityListeners(AuditingEntityListener.class)
 public class EntityB {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID", unique = true)
-    private int id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID", unique = true)
+	private int id;
 
-    @Column(name = "STRING_FIELD")
-    private String stringAttribute;
+	@Column()
+	private String attribute1;
 
     @Column(name = "created_date", nullable = false, updatable = false)
     @CreatedDate
     private long createdDate;
-
+ 
     @Column(name = "modified_date")
     @LastModifiedDate
-    private long modifiedDate;
+    private long modifiedDate;     
+
 
 
 }
