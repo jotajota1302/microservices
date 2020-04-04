@@ -1,4 +1,4 @@
-package com.everis.cad.micro.functionalityA;
+package com.everis.cad.micro;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

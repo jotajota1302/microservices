@@ -1,4 +1,4 @@
-package com.everis.cad.micro.functionalityA.domain;
+package com.everis.cad.micro.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

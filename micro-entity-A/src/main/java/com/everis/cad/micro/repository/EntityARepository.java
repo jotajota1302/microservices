@@ -1,8 +1,9 @@
-package com.everis.cad.micro.functionalityA.repository;
+package com.everis.cad.micro.repository;
 
-import com.everis.cad.micro.functionalityA.domain.EntityA;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.everis.cad.micro.domain.EntityA;
 
 @Repository
 public interface EntityARepository extends JpaRepository<EntityA, Integer> {
