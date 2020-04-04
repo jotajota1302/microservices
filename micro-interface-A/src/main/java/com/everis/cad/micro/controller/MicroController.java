@@ -4,29 +4,29 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import com.everis.cad.micro.dto.EntityADto;
+import com.everis.cad.micro.dto.MicroDto;
 
 import java.util.List;
 
-public interface EntityAController {
+public interface MicroController {
 
     @GetMapping
-    ResponseEntity<List<EntityADto>> findAll();
+    ResponseEntity<List<MicroDto>> findAll();
 
     @GetMapping(value = "/{id}")
-    ResponseEntity<EntityADto> find(@PathVariable Integer id);
+    ResponseEntity<MicroDto> find(@PathVariable Integer id);
 
     @PostMapping
-    ResponseEntity<EntityADto> create(@RequestBody EntityADto dto);
+    ResponseEntity<MicroDto> create(@RequestBody MicroDto dto);
 
     @PutMapping(value = "/{id}")
-    ResponseEntity<EntityADto> update(@PathVariable Integer id, @RequestBody EntityADto dto);
+    ResponseEntity<MicroDto> update(@PathVariable Integer id, @RequestBody MicroDto dto);
 
     @DeleteMapping(value = "/{id}")
     ResponseEntity<Void> delete(@PathVariable Integer id);
 
     @FeignClient("micro-entity-a")
-    interface Feign extends EntityAController {
+    interface Feign extends MicroController {
     }
 
 }
